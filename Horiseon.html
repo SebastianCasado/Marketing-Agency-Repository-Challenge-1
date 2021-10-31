@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <!-- Added new meta, This means that the browser will render the width page to the size of it's own screen -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <!-- Added java script, used defer to make the script load after the html do -->
+    <script src="script.js" defer> </script>
+    <link rel="stylesheet" href="./assets/Horiseon.css">
     
     <title>website</title>
 </head>
@@ -14,23 +17,23 @@
     <div class="header">
         <h1>Hori<span class="seo">seo</span>n</h1>
         <div>
-            <ul>
-                <li>
+            <ul> <!-- I added the "data-tab-target" attribute to  select the divs, the purpose of this is to will hide other tabs when one is  clicked-->
+                <li data-tab-target="#search-engine-optimization">
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
                 </li>
-                <li>
+                <li data-tab-target="#online-reputation-management">
                     <a href="#online-reputation-management">Online Reputation Management</a>
                 </li>
-                <li>
+                <li data-tab-target="#social-media-marketing">
                     <a href="#social-media-marketing">Social Media Marketing</a>
                 </li>
             </ul>
         </div>
     </div>
     <div class="hero"></div>
-    <div class="content">
-        <div class="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
+    <div class="content"> <!-- added the id for search-engine-optimizarion since it was missing-->
+        <div  id="search-engine-optimization" class="search-engine-optimization">
+            <img src="./assets/images/" class="float-left" />
             <h2>Search Engine Optimization</h2>
             <p>
                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
