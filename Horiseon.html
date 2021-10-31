@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <!-- Added new meta, This means that the browser will render the width page to the size of it's own screen -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <!-- Added java script, used defer to make the script load after the html do -->
-    <script src="script.js" defer> </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./assets/Horiseon.css">
-    
-    <title>website</title>
+    <script src="./script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- added new meta so that the size of the website will match the size of the browser's display-->
+    <title>Horiseon</title> <!-- Added new title-->
 </head>
-
 <body>
-    <div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
-            <ul> <!-- I added the "data-tab-target" attribute to  select the divs, the purpose of this is to will hide other tabs when one is  clicked-->
-                <li data-tab-target="#search-engine-optimization">
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li data-tab-target="#online-reputation-management">
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li data-tab-target="#social-media-marketing">
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
+    <div class="header"> 
+      <h1>Hori<span class="seo">seo</span>n</h1>
+     <div>
+           <ul class="tabs"><!-- added both a 'ul' class to help me style the tabs and added a new class to each one of the 'li' to also help organize-->
+                <li data-tab-target="#search-engine-optimization" class="tab active">Search Engine Optimization</li> 
+                <li data-tab-target="#online-reputation-management" class="tab">Online Reputation Management</li>
+                <li data-tab-target="#social-media-marketing " class="tab">Social Media Marketing</li>
             </ul>
         </div>
     </div>
     <div class="hero"></div>
-    <div class="content"> <!-- added the id for search-engine-optimizarion since it was missing-->
-        <div  id="search-engine-optimization" class="search-engine-optimization">
-            <img src="./assets/images/" class="float-left" />
-            <h2>Search Engine Optimization</h2>
-            <p>
-                The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-            </p>
-        </div>
-        <div id="online-reputation-management" class="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" class="float-right" />
-            <h2>Online Reputation Management</h2>
-            <p>
-                The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
-            </p>
-        </div>
-        <div id="social-media-marketing" class="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" />
-            <h2>Social Media Marketing</h2>
-            <p>
-                Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
-            </p>
-        </div>
+    <div class="tab-content"> <!-- changed name to keep my self organized-->
+                <div id="search-engine-optimization" data-tab-content class="active"> <!-- added the id for 'search-engine-optimization' since it seemed to be missing and deleted the clas for 'data-tab-content' because im turning the list into a tab target-->
+                   <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
+                  <h2>Search Engine Optimization</h2>
+                 <p>
+                 The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
+                 </p>
+                </div>
+                <div id="online-reputation-management" data-tab-content>
+                   <img src="./assets/images/online-reputation-management.jpg" class="float-right" />
+                  <h2>Online Reputation Management</h2>
+                 <p>
+                  The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
+                 </p>
+                </div>
+                <div id="social-media-marketing" data-tab-content>
+                   <img src="./assets/images/social-media-marketing.jpg" class="float-left" />
+                 <h2>Social Media Marketing</h2>
+                   <p>
+                       Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
+                    </p>
+                </div> 
     </div>
     <div class="benefits">
         <div class="benefit-lead">
@@ -84,5 +73,4 @@
         </p>
     </div>
 </body>
-
 </html>
