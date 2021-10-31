@@ -58,7 +58,7 @@ body {
     text-decoration: none;
 }
 p {
-    font-size: 20px; /*made the font bigger so the browser's dont have to struggle to read the 'p' */
+    font-size: 25px; /*made the font bigger so the browser's dont have to struggle to read the 'p' */
 }
 .hero {
     height: 800px;
